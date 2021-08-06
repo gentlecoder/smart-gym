@@ -1,0 +1,1 @@
+<view class="recommend-container"><video id="myVideo" src="http://vjs.zencdn.net/v/oceans.mp4" controls="{{true}}" data-event-opts="{{[['error',[['videoErrorCallback',['$event']]]]]}}" binderror="__e"></video><u-tabbar vue-id="1d68f946-1" list="{{vuex_tabbar}}" mid-button="{{true}}" bind:__l="__l"></u-tabbar></view>

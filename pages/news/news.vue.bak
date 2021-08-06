@@ -1,0 +1,16 @@
+<template>
+	<view class="news-container">
+		<u-empty mode="news">
+		</u-empty>
+		<u-tabbar :list="vuex_tabbar" :mid-button="true"></u-tabbar>
+	</view>
+</template>
+
+<script>
+</script>
+
+<style>
+	.news-container {
+		height: calc(100vh - 84rpx);
+	}
+</style>
