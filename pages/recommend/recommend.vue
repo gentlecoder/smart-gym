@@ -4,7 +4,7 @@
 		</u-empty> -->
 		<!-- <scroll-view scroll-top="0" scroll-y="true" class="scroll-Y"> -->
 			<!-- <view @tap="previews" style="display: flex;"> -->
-				<video id="myVideo" src="http://vjs.zencdn.net/v/oceans.mp4" @error="videoErrorCallback" controls></video>
+				<video id="myVideo" src="http://47.101.195.206:8888/live/34020000001320000001@34020000001320000001.flv" @error="videoErrorCallback" controls></video>
 			<!-- </view> -->
 		<!-- </scroll-view> -->
 		<u-tabbar :list="vuex_tabbar" :mid-button="true"></u-tabbar>
@@ -16,7 +16,8 @@
 		methods:{
 			previews() {
 				
-			}
+			},
+			videoErrorCallback() {}
 		}
 	}
 </script>

@@ -4,7 +4,10 @@
 			@markertap="clickMark" @callouttap="clickMark">
 		</map>
 		<view class="video-container">
-			<video src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
+			<!-- <live-player src="http://47.101.195.206:8888/live/34020000001320000001@34020000001320000001.flv" autoplay
+				@statechange="statechange" @error="error" style="width: 300px; height: 225px;" /> -->
+			<!-- <video src="http://vjs.zencdn.net/v/oceans.mp4" controls></video> -->
+			<video src="http://47.101.195.206:8089/Panoramic-View.mp4" controls></video>
 			<view class="ball-park-detail">
 				<text>球场名称：{{selectedBallPark.name}}</text>
 			</view>
@@ -62,6 +65,12 @@
 		methods: {
 			clickMark(e) {
 				this.selectedBallPark = this.covers.filter(cover => cover.id === e.detail.markerId)[0]
+			},
+			statechange(e) {
+				console.log('live-player code:', e.detail.code)
+			},
+			error(e) {
+				console.error('live-player error:', e.detail.errMsg)
 			}
 		}
 	}

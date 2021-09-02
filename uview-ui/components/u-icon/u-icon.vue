@@ -266,10 +266,13 @@ export default {
 
 <style scoped lang="scss">
 @import "../../libs/css/style.components.scss";
+/* #ifndef APP-PLUS-NVUE */
 @import '../../iconfont.css';
-
+/* #endif */
 .u-icon {
+	/* #ifndef APP-PLUS-NVUE */
 	display: inline-flex;
+	/* #endif */
 	align-items: center;
 
 	&--left {
@@ -320,13 +323,17 @@ export default {
 		position: absolute;
 		top: 0;
 		left: 0;
+		/* #ifndef APP-PLUS-NVUE */
 		display: inline-block;
+		/* #endif */
 		overflow: hidden;
 	}
 
 	&__img {
+		/* #ifndef APP-PLUS-NVUE */
 		height: auto;
 		will-change: transform;
+		/* #endif */
 	}
 
 	&__label {
