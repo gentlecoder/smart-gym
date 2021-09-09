@@ -29,6 +29,8 @@ const saveLifeData = function(key, value) {
 }
 const store = new Vuex.Store({
 	state: {
+		vuex_liveVideoBaseUrl: 'http://47.101.195.206:8888/',
+		vuex_liveVideoPlayUrl: 'http://47.101.195.206:9911/player.html',
 		// 如果上面从本地获取的lifeData对象下有对应的属性，就赋值给state中对应的变量
 		// 加上vuex_前缀，是防止变量名冲突，也让人一目了然
 		vuex_user: lifeData.vuex_user ? lifeData.vuex_user : {
@@ -40,37 +42,50 @@ const store = new Vuex.Store({
 		vuex_demo: '绛紫',
 		// 自定义tabbar数据
 		vuex_tabbar: [{
-				iconPath: "home",
-				selectedIconPath: "home-fill",
-				text: '首页',
-				pagePath: '/pages/index/index'
+				iconPath: "play-right",
+				selectedIconPath: "play-right-fill",
+				text: '直播',
+				pagePath: '/pages/live/live'
 			},
 			{
-				iconPath: "thumb-up",
-				selectedIconPath: "thumb-up-fill",
-				text: '推荐',
-				pagePath: '/pages/recommend/recommend'
+				iconPath: "play-circle",
+				selectedIconPath: "play-circle-fill",
+				text: '回放',
+				pagePath: '/pages/playback/playback'
 			},
-			{
-				iconPath: "share",
-				selectedIconPath: "share-fill",
-				text: '分享',
-				midButton: true,
-				pagePath: '/pages/share/share'
-			},
-			{
-				iconPath: "file-text",
-				selectedIconPath: "file-text-fill",
-				text: '资讯',
-				pagePath: '/pages/news/news'
-			},
-			{
-				iconPath: "account",
-				selectedIconPath: "account-fill",
-				text: '我的',
-				pagePath: '/pages/my/my'
-			}
-		]
+		],
+		// vuex_tabbar: [{
+		// 		iconPath: "home",
+		// 		selectedIconPath: "home-fill",
+		// 		text: '首页',
+		// 		pagePath: '/pages/index/index'
+		// 	},
+		// 	{
+		// 		iconPath: "thumb-up",
+		// 		selectedIconPath: "thumb-up-fill",
+		// 		text: '推荐',
+		// 		pagePath: '/pages/recommend/recommend'
+		// 	},
+		// 	{
+		// 		iconPath: "share",
+		// 		selectedIconPath: "share-fill",
+		// 		text: '分享',
+		// 		midButton: true,
+		// 		pagePath: '/pages/share/share'
+		// 	},
+		// 	{
+		// 		iconPath: "file-text",
+		// 		selectedIconPath: "file-text-fill",
+		// 		text: '资讯',
+		// 		pagePath: '/pages/news/news'
+		// 	},
+		// 	{
+		// 		iconPath: "account",
+		// 		selectedIconPath: "account-fill",
+		// 		text: '我的',
+		// 		pagePath: '/pages/my/my'
+		// 	}
+		// ]
 	},
 	mutations: {
 		$uStore(state, payload) {

@@ -1,0 +1,32 @@
+<template>
+	<view class="recommend-container">
+		<!-- 		<u-empty mode="list">
+		</u-empty> -->
+		<!-- <scroll-view scroll-top="0" scroll-y="true" class="scroll-Y"> -->
+		<!-- <view @tap="previews" style="display: flex;"> -->
+		<video id="myVideo" src="http://47.101.195.206:8888/live/34020000001320000001@34020000001320000001.flv" @error="videoErrorCallback" controls></video>
+		<!-- <video id="myVideo" src="http://47.101.195.206:8089/source.flv" @error="videoErrorCallback" controls></video> -->
+		<!-- </view> -->
+		<!-- </scroll-view> -->
+		<u-tabbar :list="vuex_tabbar" :mid-button="true"></u-tabbar>
+	</view>
+</template>
+
+<script>
+	export default {
+		methods: {
+			previews() {
+
+			},
+			videoErrorCallback() {
+				debugger
+			}
+		}
+	}
+</script>
+
+<style>
+	.recommend-container {
+		height: calc(100vh - 84rpx);
+	}
+</style>

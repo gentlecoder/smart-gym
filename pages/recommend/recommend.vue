@@ -1,29 +1,27 @@
 <template>
-	<view class="recommend-container">
-		<!-- 		<u-empty mode="list">
-		</u-empty> -->
-		<!-- <scroll-view scroll-top="0" scroll-y="true" class="scroll-Y"> -->
-			<!-- <view @tap="previews" style="display: flex;"> -->
-				<video id="myVideo" src="http://47.101.195.206:8888/live/34020000001320000001@34020000001320000001.flv" @error="videoErrorCallback" controls></video>
-			<!-- </view> -->
-		<!-- </scroll-view> -->
+	<view>
+		<view @click="play('http://192.168.2.157:8899/1.html')">Play video!</view>
 		<u-tabbar :list="vuex_tabbar" :mid-button="true"></u-tabbar>
+		<!-- <video id="myVideo" src="http://47.101.195.206:8888/live/34020000001320000001@34020000001320000001.flv" @error="videoErrorCallback" controls></video> -->
 	</view>
 </template>
 
 <script>
 	export default {
-		methods:{
-			previews() {
-				
-			},
-			videoErrorCallback() {}
+		data() {
+			return {}
+		},
+		methods: {
+			play(videoUrl) {
+				this.$u.route('/pages/player/player', {
+					videoUrl,
+					title: 'xx球场xx比赛直播11'
+				});
+			}
 		}
 	}
 </script>
 
 <style>
-	.recommend-container {
-		height: calc(100vh - 84rpx);
-	}
+
 </style>
